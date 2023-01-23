@@ -1,0 +1,165 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h4,h5{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h6{
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+i{
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.app {
+  background-color: #4672;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion{
+  margin-top: 2rem;
+  border-radius: 1rem;
+  width: 70%;
+  min-height: 10rem;
+  background-color: white;
+}
+
+.active {
+  height: 32rem;
+}
+
+.sec-shown{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 3.4rem 2.6rem;
+}
+
+.sec-hide{
+  height: 65%;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #545151;
+  color: white;
+  z-index: 99;
+}
+
+.wrapper{
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 8.2rem;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.toggle-btn{
+  cursor: pointer;
+}
+
+.pagination {
+  margin: auto;
+  margin-top: 4rem;
+  width: 26%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pagination button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnactive{
+  background-color: #545151;
+  color: white;
+}
+
+.loader {
+  margin-top: 5rem;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+@media screen and (max-width: 760px) {
+  .accordion {
+    width: 95%;
+  }
+  .sec-shown {
+    margin: 3.4rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .sec-hide {
+    margin-left: 0.6rem;
+    width: 95%;
+    padding: 1rem;
+    margin-top: -1.4rem;
+  }
+  .toggle-btn {
+    position: relative;
+    left: 100%;
+  }
+  .wrapper {
+    gap: 0.8rem;
+  }
+  .active {
+    height: 60%;
+  }
+  .pagination {
+    width: 70%;
+  }
+}
